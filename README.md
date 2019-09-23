@@ -1,6 +1,10 @@
 # login
 Sistema de Login em PHP e Javascript
 
+# aula 01 - 23/09/2019
+🌻🌸Começou a Primavera    🌸🍀
+Aula inicial, configuração do projeto no Github.
+E criação do passo a passo.
 ---
 # Passo a passo em t odo ínicio de aula
 ## Habilitar o Proxy
