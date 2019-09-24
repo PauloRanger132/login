@@ -29,18 +29,64 @@
             </div>
         </section>
 <!-- Fomulário de loguin -->
-     <section class="row"> 
+    <section class="row"> 
           <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin">
             <h2 class="text-center">
                 Entrar no sistema
             </h2>
+            <!-- Nome de Usuario -->
             <form action="#" method="post" class="p-2" id="formLogin">
                 <div class="form-group">
-                    <input type="text" name="" id="">
+                    <input type="text" 
+                    name="nomeUsuario"
+                    id="nomeUsuario"
+                    placeholder="Nome de usuário"
+                    class="form-control">
                 </div>
+            <!-- Senha do Usuario -->
+                <div class="form-group">
+                <input type="text" 
+                name="senhaUsuario" 
+                id="senhaUsuario" placeholder="Senha"
+                class="form-control">
+                </div>
+
+               <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
+                            <label for="lembrar" class="custom-control-label">
+                                Lembrar de mim.
+                            </label>
+
+                            <a href="#" class="float-right" id="btnEsqueci">
+                                Esqueci a senha!
+                            </a>
+                            
+                        </div>
+                    <div class="form-group">
+                    <label for=""></label>
+                    <input type="submit" value="::entrar::"
+                    name="btnEntrar" id="btnEntrar"
+                    class="btn btn-primary btn-block">
+                    </div>
+
+                    <div class="form-group">
+                        <p class="text-center">
+                            Novo usuário ? <a href="#">
+                            Registre-se aqui!
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                    </div>
+
+
             </form>
-          </div>
-     </section>
+        </div>
+    </section>
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
