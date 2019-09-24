@@ -9,7 +9,7 @@ Sistema de Login em PHP e Javascript
 Aula inicial, configuração do projeto no Github.
 E criação do passo a passo.
 ---
-# Passo a passo em t odo ínicio de aula
+# Passo a passo em todo ínicio de aula
 
 ## Habilitar o Proxy
   Tecla Windows - Abrir a janela Prompt de Comando
