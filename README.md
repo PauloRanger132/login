@@ -7,6 +7,7 @@ Aula inicial, configuração do projeto no Github.
 E criação do passo a passo.
 ---
 # Passo a passo em t odo ínicio de aula
+
 ## Habilitar o Proxy
   Tecla Windows - Abrir a janela Prompt de Comando
   Copie e cole a linha abaixo - selecione e pressione as teclas Ctrl C
@@ -36,7 +37,7 @@ E criação do passo a passo.
     - Verifique se ficou verde o Apache MySQL
     
   ## Testar se está funcionando
-    = Abra o navegador Firefox Azul e digite  http://localhost/login
+    - Abra o navegador Firefox Azul e digite  http://localhost/login
     
   ## Editar utilizando o VS Code
     - Tela windows - abrir o Visual Studio Code ( Azul )_
