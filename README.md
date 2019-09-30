@@ -5,6 +5,7 @@ Sistema de Login em PHP e Javascript
 - Formulário de Cadastro de novos usuários
 - Validação dos campos com jQuery validate
 - ~Ocultar e Mostrar os formulários com jQuery~
+
 jQuery é uma biblioteca de funções javascript.
 
 
