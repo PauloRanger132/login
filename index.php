@@ -124,12 +124,12 @@
                         Entrar por aqui    
                         </a>
                     </p>
-
-
+                    </div>
                 </form>
+
+                </div>
         </section>
-
-
+<!-- Fim da seção -->
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
