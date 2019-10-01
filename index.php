@@ -12,10 +12,11 @@
 
     <title>Sistema de Login</title>
     <style>
-        #alerta, #caixaSenha, #caixaRegistro{
+        #alerta,
+        #caixaSenha,
+        #caixaRegistro {
             display: none;
         }
-
     </style>
 </head>
 
@@ -33,44 +34,28 @@
         </section>
         <!-- formulário de login -->
         <section class="row">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" 
-            id="caixaLogin">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin">
                 <h2 class="text-center mt-2">
                     Entrar no Sistema
                 </h2>
-                <form action="#" method="post" 
-                        class="p-2" id="formLogin">
+                <form action="#" method="post" class="p-2" id="formLogin">
                     <div class="form-group">
-                        <input type="text" 
-                        name="nomeUsuario" 
-                        id="nomeUsuario" 
-                        placeholder="nome de Usuário" 
-                        class="form-control">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="nome de Usuário" class="form-control">
                     </div>
 
 
                     <div class="form-group">
-                        <input type="password" 
-                        name="senhaUsuario" 
-                        id="senhaUsuario" 
-                        placeholder="Senha" 
-                        class="form-control">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control">
                     </div>
 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" 
-                            name="lembrar" 
-                            id="lembrar" 
-                            class="custom-control-input">
-                            <label for="lembrar" 
-                            class="custom-control-label">
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
+                            <label for="lembrar" class="custom-control-label">
                                 Lembrar de mim.
                             </label>
 
-                            <a href="#" 
-                            class="float-right" 
-                            id="btnEsqueci">
+                            <a href="#" class="float-right" id="btnEsqueci">
                                 Esqueci a senha!
                             </a>
 
@@ -78,18 +63,14 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" 
-                        value="entrar" 
-                        name="btnEntrar" 
-                        id="btnEntrar" 
-                        class="btn btn-primary btn-block">
+                        <input type="submit" value="entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
                     </div>
 
                     <div class="form-group">
                         <p class="text-center">
-                            Novo usuário? 
+                            Novo usuário?
                             <a href="#" id="btnRegistrarNovo">
-                            Restritre-se aqui!
+                                Resgistre-se aqui!
                             </a>
                         </p>
                     </div>
@@ -101,37 +82,25 @@
         <br>
         <!-- formulário de recuperação de senha -->
         <section class="row">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" 
-                    id="caixaSenha">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaSenha">
                 <h2 class="text-center mt-2">
                     Gerar Nova Senha
                 </h2>
 
-                <form action="#" 
-                method="post" 
-                id="formSenha" 
-                class="p-2">
+                <form action="#" method="post" id="formSenha" class="p-2">
                     <div class="form-group">
                         <small class="text-muted">
-                            Para gerar uma nova senha digite o seu e-mail. 
+                            Para gerar uma nova senha digite o seu e-mail.
                             Clique no link gerado
                         </small>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" 
-                        name="emailGerarSenha" 
-                        id="emailGerarSenha" 
-                        class="form-control" 
-                        placeholder="Email de recuperação de senha">
+                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="Email de recuperação de senha">
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" 
-                        value="Gerar" 
-                        name="btnGerar" 
-                        id="btnGerar" 
-                        class="btn btn-primary btn-block">
+                        <input type="submit" value="Gerar" name="btnGerar" id="btnGerar" class="btn btn-primary btn-block">
                     </div>
 
                     <div class="form-group">
@@ -154,70 +123,39 @@
         <section class="row mt-5">
             <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaRegistro">
                 <h2 class="text-center mt-2">Registre-se aqui</h2>
-                <form action="#" 
-                        method="post" 
-                        class="p-2" 
-                        id="formeRegistro">
+                <form action="#" method="post" class="p-2" id="formeRegistro">
                     <div class="form-group">
-                        <input type="text" 
-                        name="nomeCompleto" 
-                        id="nomeCompleto" 
-                        class="form-control" 
-                        placeholder=" Nome completo">
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder=" Nome completo">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" 
-                        name="nomeUsuario" 
-                        id="nomeusuario" 
-                        class="form-control" 
-                        placeholder="Nome de usuário">
+                        <input type="text" name="nomeUsuario" id="nomeusuario" class="form-control" placeholder="Nome de usuário">
                     </div>
 
                     <div class="form-group">
-                        <input type="email" 
-                        name="emailUsuario" 
-                        id="emailUsuario" 
-                        class="form-control" 
-                        placeholder="E-mail">
+                        <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" 
-                        name="senhaUsuario0" 
-                        id="senhaUsuario" 
-                        class="form-control" 
-                        placeholder="Senha">
+                        <input type="password" name="senhaUsuario0" id="senhaUsuario" class="form-control" placeholder="Senha">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" 
-                        name="senhaUsuarioConfirar" 
-                        id="senhaUsuarioConfirar" 
-                        class="form-control" 
-                        placeholder="Confirmar senha">
+                        <input type="password" name="senhaUsuarioConfirar" id="senhaUsuarioConfirar" class="form-control" placeholder="Confirmar senha">
                     </div>
 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" 
-                            name="concordar" 
-                            id="concordar" 
-                            class="custom-control-input">
-                            <label for="concordar" 
-                            class="custom-control-label">
-                            Eu concordo com <a href="#">
-                            os termos e condições</a>
+                            <input type="checkbox" name="concordar" id="concordar" class="custom-control-input">
+                            <label for="concordar" class="custom-control-label">
+                                Eu concordo com <a href="#">
+                                    os termos e condições</a>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <input type="button" 
-                        value="Registrar" 
-                        name="btnRegistrar" 
-                        id="btnRegistrar" 
-                        class="btn btn-primary btn-block">
+                        <input type="button" value="Registrar" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary btn-block">
                     </div>
 
                     <div class="form-group">
@@ -243,8 +181,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-    // Código jQuery para mostrar e ocultar os formulários
+        // Código jQuery para mostrar e ocultar os formulários
+        $(function() {
+                    $("#btnEsqueci").click(function() {
+                            $("#caixaLogin").hide(); //ocultar
+                            $("#caixaSenha").show();
+                    });
 
+                    $("#btnJaRegistrado".click(function() {
+                            $("#caixaSenha").hide();
+                            $("#caixaLogin").show();
+        });
+
+                    $("btnJaregistrado2").click(function(){
+                            $("#caixaLogin").hide();
+                            $("#caixaRegistro")show();
+                    });
+        }));
     </script>
 
 
