@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Sistema de Login</title>
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
     <style>
         #alerta,
         #caixaSenha,
@@ -48,7 +49,7 @@
                         <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-5">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
                             <label for="lembrar" class="custom-control-label">
@@ -129,7 +130,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="nomeUsuario" id="nomeusuario" class="form-control" placeholder="Nome de usuário" required minlength="5">
+                        <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" class="form-control" placeholder="Nome de usuário" required minlength="5">
                     </div>
 
                     <div class="form-group">
@@ -137,14 +138,14 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaDoUsuario0" id="senhaDoUsuario" class="form-control" placeholder="Senha" required minlength="6">
+                        <input type="password" name="senhaDoUsuario" id="senhaDoUsuario" class="form-control" placeholder="Senha" required minlength="6">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuarioConfirar" id="senhaUsuarioConfirar" class="form-control" placeholder="Confirmar senha" required minlength="6">
+                        <input type="password" name="senhaUsuarioConfirmar" id="senhaUsuarioConfirmar" class="form-control" placeholder="Confirmar senha" required minlength="6">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" name="concordar" id="concordar" class="custom-control-input">
                             <label for="concordar" class="custom-control-label">
@@ -185,6 +186,27 @@
     <script>
         // Código jQuery para mostrar e ocultar os formulários
         $(function() {
+            //Validação de Formulários
+            jQuery.validator.setDefaults({
+                success: "valid"
+            });
+            $("#formRegistro").validate({
+                rules: {
+                    senhaDoUsuario: "required",
+                    senhaUsuarioConfirmar: {
+                        equalTo: "#senhaDoUsuario"
+                    }
+                }
+            });
+            $("#formLogin").validate();
+
+            $("#formSenha").validate();
+
+
+
+
+
+            //Mostrar e Ocultar Formulários
             $("#btnEsqueci").click(function() {
                 $("#caixaLogin").hide(); //Ocultar
                 $("#caixaSenha").show(); //Mostrar
@@ -204,6 +226,32 @@
                 $("#caixaRegistro").hide();
                 $("#caixaLogin").show();
             });
+        });
+
+
+
+        /*
+         * Translated default messages for the jQuery validation plugin.
+         * Locale: PT_BR
+         */
+        jQuery.extend(jQuery.validator.messages, {
+            required: "Este campo &eacute; requerido.",
+            remote: "Por favor, corrija este campo.",
+            email: "Por favor, forne&ccedil;a um endere&ccedil;o eletr&ocirc;nico v&aacute;lido.",
+            url: "Por favor, forne&ccedil;a uma URL v&aacute;lida.",
+            date: "Por favor, forne&ccedil;a uma data v&aacute;lida.",
+            dateISO: "Por favor, forne&ccedil;a uma data v&aacute;lida (ISO).",
+            number: "Por favor, forne&ccedil;a um n&uacute;mero v&aacute;lido.",
+            digits: "Por favor, forne&ccedil;a somente d&iacute;gitos.",
+            creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
+            equalTo: "Por favor, forne&ccedil;a o mesmo valor novamente.",
+            accept: "Por favor, forne&ccedil;a um valor com uma extens&atilde;o v&aacute;lida.",
+            maxlength: jQuery.validator.format("Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres."),
+            minlength: jQuery.validator.format("Por favor, forne&ccedil;a ao menos {0} caracteres."),
+            rangelength: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento."),
+            range: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1}."),
+            max: jQuery.validator.format("Por favor, forne&ccedil;a um valor menor ou igual a {0}."),
+            min: jQuery.validator.format("Por favor, forne&ccedil;a um valor maior ou igual a {0}.")
         });
     </script>
 
