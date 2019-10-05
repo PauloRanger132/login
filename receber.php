@@ -30,14 +30,14 @@ if (isset($_POST['nome'])){
     echo "\n</pre>\n";
 
     print("\n<br><strong>Nome:</strong>\n");
-    print("$_GET[nome]");
+    print("$_POST[nome]");
 
     print("\n<br><strong>E-mail:</strong>\n");
-    print("$_GET[email]");
+    print("$_POST[email]");
 
     print("\n<br><strong>Senha:</strong>\n");
-    print("$_GET[senha]");
+    print("$_POST[senha]");
 
     print("\n<br><strong>Data:</strong>\n");
-    print("$_GET[data_de_nascimento]");
+    print("$_POST[data_de_nascimento]");
 }
