@@ -2,7 +2,7 @@
 Sistema de Login em PHP e Javascript
 
 # aula 06 - 15/10/19
-
+Persistênciia de dados no banco de dados
 
 # aula 05 - 07/10/2019
 Envio de dados do Front-end para o Back-end, 
@@ -71,3 +71,10 @@ E criação do passo a passo.
   ## Editar utilizando o VS Code
     - Tela windows - abrir o Visual Studio Code ( Azul )_
     - *abrir pasta* no VS Code escolha C:xamp\xampp\htdocs\login
+
+  ## importar o banco de dados
+    - Acessar no navegador http://localhost/phpmyadmin
+    - Clicar em importar
+    - Selecionar o arquivo, clicando em Browse ou escolha o arquivo
+    - Abra o arquivo 128.0.0.1.sql e clique em executar 
+    - O banco deve ter sido importado corretamente
