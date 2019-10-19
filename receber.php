@@ -1,32 +1,75 @@
 <?php
-# Back-end
-//Verifica se o método GET está enviando dados
-if (isset($_GET['nome'])) {
-    echo "\n<h1>Envio de dados método <em>GET</em></h1>";
-    echo "\n<pre>\n";
-    print_r($_GET); #Array
-    echo "\n</pre>\n";
-    print("\n<br><strong>Nome: </strong>");
-    print("$_GET[nome]");
-    print("\n<br><strong>E-mail: </strong>");
-    print("$_GET[email]");
-    print("\n<br><strong>Senha: </strong>");
-    print("$_GET[senha]");
-    print("\n<br><strong>Data de Nascimento: </strong>");
-    print("$_GET[data_de_nascimento]");
+//conexao com o banco de dados
+require_once 'configBD.php';
+
+function verificar_entrada($entrada)
+{
+    //filtrando a entrada
+    $saida = htmlspecialchars($entrada);
+    $saida = stripslashes($saida);
+    $saida = trim($saida);
+    return $saida; //retorna a saida limpa
 }
-//Verifica se o método POST está enviando dados
-if (isset($_POST['nome'])) {
-    echo "\n<h1>Envio de dados método <em>POST</em></h1>";
-    echo "\n<pre>\n";
-    print_r($_POST); #Array
-    echo "\n</pre>\n";
-    print("\n<br><strong>Nome: </strong>");
-    print("$_POST[nome]");
-    print("\n<br><strong>E-mail: </strong>");
-    print("$_POST[email]");
-    print("\n<br><strong>Senha: </strong>");
-    print("$_POST[senha]");
-    print("\n<br><strong>Data de Nascimento: </strong>");
-    print("$_POST[data_de_nascimento]");
+//teste se existe a ação
+if (isset($_POST['action'])) {
+    if ($_POST['action'] == 'cadastro') {
+        //teste se ação é igual a cadastro
+
+        #echo "\n<p>cadastro</p>";
+        #echo "\n<pre>";
+        #print_r($_POST);
+        #echo "\n</pre>";
+        //pegando dados do formulario
+        $nomeCompleto = verificar_entrada($_POST['nomeCompleto']);
+        $nomeDoUsuario = verificar_entrada($_POST['nomeDoUsuario']);
+        $emailUsuario = verificar_entrada($_POST['emailUsuario']);
+        $senhaDoUsuario = verificar_entrada($_POST['senhaDoUsuario']);
+        $senhaUsuarioConfirmar = verificar_entrada($_POST['senhaUsuarioConfirmar']);
+        $dataCriado = date("Y-m-d"); // data atual no formato banco de dados
+
+        //codificando as senhas
+        $senhaCodificada = sha1($senhaDoUsuario);
+        $senhaConfirmarCod = sha1($senhaUsuarioConfirmar);
+        //teste de captura de dados
+        echo "<p>Nome completo: $nomeCompleto </p>";
+        echo "<p>Nome de Usuario: $nomeDoUsuario </p>";
+        echo "<p>E-mail: $emailUsuario </p>";
+        echo "<p>Senha codificada: $senhaCodificada</p>";
+        echo "<p>Data de criação: $dataCriado</p>";
+    } else if ($_POST['action'] == 'login') {
+        //senão, teste se ação é login
+        $nomeUsuario = verificar_entrada($_POST['nomeUsuario']);
+        $senhaUsuario = verificar_entrada($_POST['senhaUsuario']);
+        $senha = sha1($senhaUsuario);
+        $sql = $connect->prepare("SELECT * FROM usuario WHERE
+        senhaDoUsuario = ? AND nomeDoUsuario = ?");
+
+        $sql->bind_param("ss,", $senha, $nomeusuario);
+
+        $sql->execute();
+
+        $busca = $sql->fetch();
+
+        if($busca != null){
+            echo "ok";
+        }else{
+            echo "<p class='text-danger'>";
+            echo"Falhou a entrada no sistema. Nome de usuário ou senha inválidos";
+            echo "</p>";
+            exit();
+        }
+    } else if ($_POST['action'] == 'senha') {
+        //senão, teste se ação é senha
+        echo "<\np>senha</p>";
+        echo "\n<pre>";
+        print_r($_POST);
+        echo "\n</pre>";
+    } else {
+
+        header("location:index.php");
+    }
+} else {
+    //redirecionando para index.php, negando o acesso
+    //a esse arquivo diretamente.
+    header("location:index.php");
 }

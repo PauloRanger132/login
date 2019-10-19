@@ -29,7 +29,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        Alo Ha Tchurmaáaaaaaaaaaaaaaaa!
+                        BOA NOITE SENHORAS E SENHORES
                     </strong>
                 </div>
             </div>
