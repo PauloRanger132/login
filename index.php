@@ -29,7 +29,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        BOA NOITE SENHORAS E SENHORES
+                        Alo Ha Tchurmaáaaaaaaaaaaaaaaa!
                     </strong>
                 </div>
             </div>
@@ -222,7 +222,12 @@
                         data: $("#formLogin").serialize() + '&action=login',
                         success: function(resposta) {
                             $("#alerta").show();
-                            $(".resultado").html(resposta);
+                            //$(".resultado").html(resposta);
+                            if (resposta === "ok") {
+                                window.location = "perfil.php";
+                            } else {
+                                $(".resultado").html(resposta);
+                            }
                         }
                     });
                 }
