@@ -91,7 +91,24 @@ if (isset($_POST['action'])) {
 
         if ($busca != null) {
         $_SESSION['nomeDoUsuario'] = $nomeUsuario;
+
+            if(!empty($_POST['lembrar'])){
+                //se lembrar não estiver vazio.
+                //ou seja, a pessoa quer ser lembrada!
+                setcookie("nomeDoUsuario", $nomeDoUsuario,
+                time()+(60*60*24*30));
+                setcookie("senhaDoUsuario", senhaUsuario,
+                time()+(60*60*24*30));
+
+            }else{
+                //A pessoa não quer ser lembrada.
+                //Limpando o coockie
+                setcookie("nomeDoUsuario","");
+                setcookie("senhaDoUsuario","");
+            }
+            
             echo "ok";
+            
         } else {
             echo "<p class'text-danger'>";
             echo "Falhou a entrada no sistema. Nome ou senha de usuário inválidos";
