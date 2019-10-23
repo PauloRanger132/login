@@ -93,11 +93,11 @@ if (isset($_POST['action'])) {
         $_SESSION['nomeDoUsuario'] = $nomeUsuario;
 
             if(!empty($_POST['lembrar'])){
-                //se lembrar não estiver vazio.
-                //ou seja, a pessoa quer ser lembrada!
-                setcookie("nomeDoUsuario", $nomeDoUsuario,
-                time()+(60*60*24*30));
-                setcookie("senhaDoUsuario", senhaUsuario,
+                //se lebrar não estiver vazio!
+                //ou seja, a pessoa q ser lembrada
+                setcookie("nomeDoUsuario", $nomeUsuario, time()+(60*60*24*30*365));
+                
+                setcookie("senhaDoUsuario", $senhaUsuario,
                 time()+(60*60*24*30));
 
             }else{

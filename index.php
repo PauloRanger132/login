@@ -40,17 +40,43 @@
                 <h2 class="text-center mt-2">
                     Entrar no Sistema
                 </h2>
-                <form action="#" method="post" class="p-2" id="formLogin">
+                <form action="#" method="post" 
+                        class="p-2" id="formLogin">
                     <div class="form-group">
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" required minlength="5">
+                        <input type="text" 
+                        name="nomeUsuario" 
+                        id="nomeUsuario" 
+                        placeholder="Nome de Usuário" 
+                        class="form-control" 
+                        required minlength="5"
+                        value="<?= 
+                        isset($_COOKIE['nomeDoUsuario'])
+                        ?$_COOKIE['nomeDoUsuario']:""; 
+                        ?>">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6">
+                        <input type="password" 
+                        name="senhaUsuario" 
+                        id="senhaUsuario" 
+                        placeholder="Senha" 
+                        class="form-control" 
+                        required minlength="6"
+                        value="<?= 
+                        isset($_COOKIE['senhaDoUsuario'])
+                        ?$_COOKIE['senhaDoUsuario']:""; 
+                        ?>">
                     </div>
                     <div class="form-group mt-5">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
-                            <label for="lembrar" class="custom-control-label">
+                            <input type="checkbox" 
+                            name="lembrar" 
+                            id="lembrar" 
+                            class="custom-control-input"
+                            <?= 
+                        isset($_COOKIE['senhaDoUsuario'])
+                        ?" checked":"";?>>
+                            <label for="lembrar" 
+                            class="custom-control-label">
                                 Lembrar de mim.
                             </label>
                             <a href="#" class="float-right" id="btnEsqueci">
@@ -59,11 +85,16 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="::Entrar::" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
+                        <input type="submit" 
+                        value="::Entrar::" 
+                        name="btnEntrar" 
+                        id="btnEntrar" 
+                        class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p class="text-center">
-                            Novo usuário? <a href="#" id="btnRegistrarNovo">
+                            Novo usuário? <a href="#" 
+                            id="btnRegistrarNovo">
                                 Registre-se aqui!
                             </a>
                         </p>
@@ -74,11 +105,15 @@
         <!-- Final da Seção de Login-->
         <!-- Formulário de Recuperação de Senha -->
         <section class="row mt-5">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaSenha">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" 
+            id="caixaSenha">
                 <h2 class="text-center mt-2">
                     Gerar Nova Senha
                 </h2>
-                <form action="#" method="post" id="formSenha" class="p-2">
+                <form action="#" 
+                method="post" 
+                id="formSenha" 
+                class="p-2">
                     <div class="form-group">
                         <small class="text-muted">
                             Para gerar uma nova senha, digite o
@@ -86,10 +121,19 @@
                         </small>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha" required>
+                        <input type="email" 
+                        name="emailGerarSenha" 
+                        id="emailGerarSenha" 
+                        class="form-control" 
+                        placeholder="E-mail de recuperação de senha" 
+                        required>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="::Gerar::" name="btnGerar" id="btnGerar" class="btn btn-primary btn-block">
+                        <input type="submit" 
+                        value="::Gerar::" 
+                        name="btnGerar" 
+                        id="btnGerar" 
+                        class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p class="text-center">
@@ -106,35 +150,72 @@
         <!-- Início do formulário de 
         cadastro de novos usuários -->
         <section class="row mt-5">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaRegistro">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" 
+            id="caixaRegistro">
                 <h2 class="text-center mt-2">Registre-se aqui</h2>
-                <form action="#" method="post" class="p-2" id="formRegistro">
+                <form action="#" 
+                        method="post" 
+                        class="p-2" 
+                        id="formRegistro">
                     <div class="form-group">
-                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome completo" required minlength="6">
+                        <input type="text" 
+                        name="nomeCompleto" 
+                        id="nomeCompleto" 
+                        class="form-control" 
+                        placeholder="Nome completo" 
+                        required minlength="6">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" class="form-control" placeholder="Nome de usuário" required minlength="5">
+                        <input type="text" 
+                        name="nomeDoUsuario" 
+                        id="nomeDoUsuario" 
+                        class="form-control" 
+                        placeholder="Nome de usuário" 
+                        required minlength="5">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail" required>
+                        <input type="email" 
+                        name="emailUsuario" 
+                        id="emailUsuario" 
+                        class="form-control" 
+                        placeholder="E-mail" 
+                        required>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="senhaDoUsuario" id="senhaDoUsuario" class="form-control" placeholder="Senha" required minlength="6">
+                        <input type="password" 
+                        name="senhaDoUsuario" 
+                        id="senhaDoUsuario" 
+                        class="form-control" 
+                        placeholder="Senha" 
+                        required minlength="6">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="senhaUsuarioConfirmar" id="senhaUsuarioConfirmar" class="form-control" placeholder="Confirmar senha" required minlength="6">
+                        <input type="password" 
+                        name="senhaUsuarioConfirmar" 
+                        id="senhaUsuarioConfirmar" 
+                        class="form-control" 
+                        placeholder="Confirmar senha" 
+                        required minlength="6">
                     </div>
                     <div class="form-group mt-4">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="concordar" id="concordar" class="custom-control-input">
-                            <label for="concordar" class="custom-control-label">
+                            <input type="checkbox" 
+                            name="concordar" 
+                            id="concordar" 
+                            class="custom-control-input">
+                            <label for="concordar" 
+                            class="custom-control-label">
                                 Eu concordo com <a href="#">
                                     os termos e condições.</a>
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="::Registrar::" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary btn-block">
+                        <input type="submit" 
+                        value="::Registrar::" 
+                        name="btnRegistrar" 
+                        id="btnRegistrar" 
+                        class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p class="text-center">
