@@ -14,8 +14,10 @@ if (isset($_SESSION['nomeDoUsuario'])) {
 
     $nomeDoUsuario = $linha['nomeDoUsuario'];
     $nomeCompleto = $linha ['nomeCompleto'];
-    $email = $linha['emailUsuario'];
+    $emailUsuario = $linha['emailUsuario'];
     $dataCriado =$linha['dataCriado'];
+
+        $dataCriado = date('d/m/Y', strtotime($dataCriado)); 
 
 } else {
     //Senão estiver logado, rediricionar para index

@@ -67,7 +67,7 @@ require_once "session.php";
             </h2>
 
             <h2 class="text-center">
-            Registrado em: <?= $dataCriado ?></h2>
+            Registrado em: <?php echo date('d/m/Y', strtotime($dataCriado)); ?>
         </div>
     </div>
 
