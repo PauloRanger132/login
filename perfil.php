@@ -39,7 +39,7 @@ require_once "session.php";
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    perfil
+                    <?= $nomeDoUsuario ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Sobre</a>
@@ -52,19 +52,24 @@ require_once "session.php";
 </nav>
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Boas vindas</h1>
-        <h2 class="display-2 text-center rounded p-1"
-            style="background-color:plum; color:mediumpurple">
-            Nome completo
-        </h2>
-        <h2>
-            Nome do usuário
-        </h2>
-        <h2>
-            Registrado em: 18/10/2019
-        </h2>
-</div>
+        <div class="container">
+            <h1 class="display-4">Boas vindas</h1>
+            
+            <h2 class="display-2 text-center rounded p-1 bg-danger" color:mediumpurple">
+            <?= $nomeCompleto ?>
+            </h2>
+            
+            <h2 class="text-center">
+            E-mail do Usuário:
+            <a href="mailto:<?=$emailUsuario?>">
+            <?=$emailUsuario?>
+            </a>
+            </h2>
+
+            <h2 class="text-center">
+            Registrado em: <?= $dataCriado ?></h2>
+        </div>
+    </div>
 
 <!-- JavaScript (Opcional) -->
 <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

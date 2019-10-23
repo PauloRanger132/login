@@ -13,17 +13,17 @@ Sistema de Login em PHP e Javascript
 # aula 06 - 15/10/19
 Persistênciia de dados no banco de dados
 
-# aula 05 - 07/10/2019
+# aula 05 - 07/10/19
 Envio de dados do Front-end para o Back-end, 
 métodos GET e POST.
 
-# aula 04 - 01/10/2019
+# aula 04 - 01/10/19
 - Validação com HTML5
 - Validação dos campos com jQuery validate
 
 
 
-# aula 03 - 24/09/2019
+# aula 03 - 24/09/19
 - Formulário de Cadastro de novos usuários
 - ~Validação dos campos com jQuery validate~
 - Ocultar e Mostrar os formulários com jQuery
@@ -31,7 +31,7 @@ métodos GET e POST.
 jQuery é uma biblioteca de funções javascript.
 
 
-# aula 02 - 24/09/2019
+# aula 02 - 24/09/19
 Layout Bootstrap para os formulários
 - Formulário de login 
 - Formulário de recuperação de senha
