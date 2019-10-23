@@ -79,6 +79,7 @@
                             class="custom-control-label">
                                 Lembrar de mim.
                             </label>
+                            
                             <a href="#" class="float-right" id="btnEsqueci">
                                 Esqueci a senha!
                             </a>
