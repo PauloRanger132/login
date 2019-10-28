@@ -13,11 +13,11 @@ Sistema de Login em PHP e Javascript
 - Início da autenticação do sistema
 
 # aula 06 - 15/10/19
-Persistênciia de dados no banco de dados
+- Persistênciia de dados no banco de dados
 
 # aula 05 - 07/10/19
-Envio de dados do Front-end para o Back-end, 
-métodos GET e POST.
+- Envio de dados do Front-end para o Back-end, 
+- métodos GET e POST.
 
 # aula 04 - 01/10/19
 - Validação com HTML5
