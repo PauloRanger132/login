@@ -23,6 +23,7 @@ if (isset($_POST['action'])) {
         $nomeCompleto = verificar_entrada($_POST['nomeCompleto']);
         $nomeDoUsuario = verificar_entrada($_POST['nomeDoUsuario']);
         $emailUsuario = verificar_entrada($_POST['emailUsuario']);
+        $urlPerfil = verificar_entrada($_POST['urlPerfil']);
         $senhaDoUsuario = verificar_entrada($_POST['senhaDoUsuario']);
         $senhaUsuarioConfirmar = verificar_entrada($_POST['senhaUsuarioConfirmar']);
         $dataCriado = date("Y-m-d"); // data atual no formato banco de dados
@@ -36,6 +37,7 @@ if (isset($_POST['action'])) {
         echo "<p>E-mail: $emailUsuario </p>";
         echo "<p>Senha codificada: $senhaCodificada</p>";
         echo "<p>Data de criação: $dataCriado</p>";
+        echo "<p>Data de criação: $urlPerfil</p>";
     } else if ($_POST['action'] == 'login') {
         //senão, teste se ação é login
         $nomeUsuario = verificar_entrada($_POST['nomeUsuario']);

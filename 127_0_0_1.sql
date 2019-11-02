@@ -22,7 +22,7 @@ SET time_zone = "+00:00";
 -- Banco de dados: `senai`
 --
 DROP DATABASE IF EXISTS `senai`;
-CREATE DATABASE IF NOT EXISTS `senai` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `senai` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `senai`;
 
 -- --------------------------------------------------------
@@ -33,13 +33,14 @@ USE `senai`;
 
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
-  `idUsuario` int(10) UNSIGNED NOT NULL,
+  `idUsuario` int(10) UNSIGNED NOT NULL PRIMARY KEY auto_increment,
   `nomeCompleto` varchar(100) NOT NULL,
   `nomeDoUsuario` varchar(45) NOT NULL,
   `emailUsuario` varchar(45) NOT NULL,
   `senhaDoUsuario` char(40) NOT NULL,
-  `dataCriado` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `dataCriado` date NOT NULL,
+  `urlPerfil`	varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tabelas despejadas
@@ -49,19 +50,8 @@ CREATE TABLE `usuario` (
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idUsuario`),
   ADD UNIQUE KEY `nomeDoUsuario` (`nomeDoUsuario`),
   ADD UNIQUE KEY `emailUsuario` (`emailUsuario`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

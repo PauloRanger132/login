@@ -16,64 +16,60 @@ require_once "session.php";
 </head>
 
 <body>
-    <h1></h1>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Lil Raff</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Destaques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fotos.php">Fotos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= $nomeDoUsuario ?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Sobre</a>
+                        <a class="dropdown-item" href="fotos.php">Fotos</a>
+                        <a class="dropdown-item" href="sair.php">Sair</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Fim da barra de navegação -->
 
-
-
-</html>
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light
- ">
-    <a class="navbar-brand" href="#">Lil Raff</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Destaques</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?= $nomeDoUsuario ?>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Sobre</a>
-                    <a class="dropdown-item" href="#">Fotos</a>
-                    <a class="dropdown-item" href="sair.php">Sair</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Boas vindas</h1>
-            
-            <h2 class="display-2 text-center rounded p-1 bg-danger" color:mediumpurple">
-            <?= $nomeCompleto ?>
-            </h2>
-            
-            <h2 class="text-center">
-            E-mail do Usuário:
-            <a href="mailto:<?=$emailUsuario?>">
-            <?=$emailUsuario?>
-            </a>
-            </h2>
-
-            <h2 class="text-center">
-            Registrado em: <?php echo date('d/m/Y', strtotime($dataCriado)); ?>
+            <h1 class="display-4">Boas vindas!</h1>
+            <h2 class="display-2 text-center bg-info text-light rounded p-2"><?= $nomeCompleto ?></h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="<?= $urlPerfil ?>" width="300px" alt="foto de perfil">
+                </div>
+                <div class="col-8">
+                    <h2 class="text-center">E-mail do Usuário: <a href="mailto:<?= $emailUsuario ?>"><?= $emailUsuario ?></a></h2>
+                    <h2 class="text-center">Registrado em: <?= $dataCriado ?></h2>
+                </div>
+            </div>
         </div>
     </div>
 
-<!-- JavaScript (Opcional) -->
-<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
+</html>
