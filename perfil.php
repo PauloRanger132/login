@@ -22,7 +22,7 @@ require_once "session.php";
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
@@ -31,7 +31,7 @@ require_once "session.php";
                     <a class="nav-link" href="#">Destaques</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="fotos.php">Fotos</a>
+                    <a class="nav-link" href="fotos.php"></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,7 +51,7 @@ require_once "session.php";
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Boas vindas!</h1>
-            <h2 class="display-2 text-center bg-info text-light rounded p-2"><?= $nomeCompleto ?></h2>
+            <h2 class="display-2 text-center bg-dark text-light rounded p-2"><?= $nomeCompleto ?></h2>
             <div class="row">
                 <div class="col-4">
                     <img src="<?= $urlPerfil ?>" width="300px" alt="foto de perfil">

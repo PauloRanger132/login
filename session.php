@@ -12,10 +12,9 @@ if (isset($_SESSION['nomeDoUsuario'])) {
     $nomeDoUsuario = $linha['nomeDoUsuario'];
     $nomeCompleto = $linha['nomeCompleto'];
     $emailUsuario = $linha['emailUsuario'];
-    $urlPerfil = $linha['urlPerfil'];
+    $urlPerfil = $linha['urlPerfil']; //hm....
     $dataCriado = $linha['dataCriado'];
-    
-
+    // Conversão de data
     $dataCriado = date('d/m/Y', strtotime($dataCriado));
 } else {
     //Se não, voltar index

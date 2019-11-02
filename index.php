@@ -141,7 +141,7 @@ Abra a URL http://localhost/login no navegador -->
                     </div>
 
                     <div class="form-group">
-                        <input type="url" name="urlPerfil" id="urlPerfil" class="form-control" placeholder="Url do Perfil" required>
+                        <input type="url" name="urlPerfil" id="urlPerfil" class="form-control" placeholder="Url do perfil" required>
                     </div>
 
                     <div class="form-group">
@@ -186,20 +186,20 @@ Abra a URL http://localhost/login no navegador -->
                 </h2>
                 <form action="">
                     <div class="form-group">
-                        <input type="text" name="nomeCompletoNovo" id="nomeCompletoNovo" class="form-control" placeholder="Nome completo...">
+                        <input type="text" name="nomeCompletoNovo" id="nomeCompletoNovo" class="form-control" placeholder="Nome completo Do usuário">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="emailNovo" id="emailNovo" class="form-control" placeholder="E-mail...">
+                        <input type="email" name="emailNovo" id="emailNovo" class="form-control" placeholder="E-mail do Usuário">
                     </div>
                     <div class="form-group">
                         <label for="dataDeAniver">Data de Aniversário</label>
-                        <input type="date" name="dataDeAniver" id="dataDeAniver" class="form-control">
+                        <input type="date" name="dataAniversário" id="dataDeAniver" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="url" name="redeSocial" id="redeSocial" class="form-control" placeholder="Url da rede social...">
+                        <input type="url" name="redeSocial" id="redeSocial" class="form-control" placeholder="Url Rede Social">
                     </div>
                     <div class="form-group">
-                        <input type="url" name="fotoNovo" id="fotoNovo" class="form-control" placeholder="Url de imagem...">
+                        <input type="url" name="fotoImagem" id="fotoImagem" class="form-control" placeholder="Url de Imagem ">
                     </div>
                     <div class="form-group">
                         <label for="selectEstado">Estado</label>
@@ -212,7 +212,7 @@ Abra a URL http://localhost/login no navegador -->
                     <div class="form-group">
                         <label for="selectCidade">Cidade</label>
                         <select name="selectCidade" id="selectCidade" class="form-control">
-                            <option value="guabiruba">Guabiruba</option>
+                            <option value="guabiruba">Brusque</option>
                             <option value="itajai">Itajaí</option>
                             <option value="blumenau">Blumenau</option>
                             <option value="novaTrento">Nova Trento</option>
@@ -220,7 +220,7 @@ Abra a URL http://localhost/login no navegador -->
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Inovar" class="btn btn-primary btn-block" id="btnEntrarNovo" name="btnEntrarNovo">
+                        <input type="submit" value="INOVAR!!!" class="btn btn-primary btn-block" id="btnEntrarNovo" name="btnEntrarNovo">
                     </div>
                     <div class="form-group">
                         <p class="text-center">
