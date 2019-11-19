@@ -3,8 +3,11 @@ Sistema de Login em PHP e Javascript
 
 
 
+# AULA 10 - 19/11/19
+-
+-
 
-# AULA 10 - 23/10/19
+# AULA 10 - 18/11/19
 - Atualização do Banco de Dados
 - Inclusão dos campos token e TempoDeVida
 # AULA 09 - 22/10/19
