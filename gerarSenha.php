@@ -3,9 +3,34 @@ if(isset($_GET['token'])&& isset($_GET['email'])){
         require_once'configBD.php';
         $email = $_GET['email'];
         $token = $_GET['token'];
-        $msg = "$email : $token";
+        //$msg = "$email : $token";
         //So pra teste! Método GET
         //gerarSenha.php?token=123456780&email=robert@gmail.com
+
+        $sql = $connect->prepare("SELECT * FROM usuario WHERE
+        emailUsuario=? AND token=? AND tempoDeVida > NOW()");
+        $sql->bind_param("ss", $email, $token);
+        $sql->execute();
+
+        $resultado = $sql->get_result();
+        if($resultado->num_rows > 0){
+            if(isset($_POST['gerar'])){
+                $nova_senha = sha1($_POST['senha']);
+                $confirmar_senha = sha1($_POST['csenha']);
+                if($nova_senha == $confirmar_senha){
+                    $sql = $connect->prepare("UPDATE usuario SET senhaDoUsuario=?, token='' WHERE emailUsuario=?");
+                    $sql->bind_param("ss",$nova_senha,$email);
+                    $sql->execute();
+                    $msg = "Senha alterada com sucesso";
+                }else{
+                    $msg = "Senhas não conferem";
+                }
+            }
+
+        }else{
+            header("location: index.php");
+            exit();
+        }//Não apaga o else debaixo!!!
 }else{
         //kickando para o Index
         header("location: index.php");
@@ -31,7 +56,7 @@ if(isset($_GET['token'])&& isset($_GET['email'])){
     <main class="container">
     <section class="row justify-content-center">
         <div class="col-lg-5 mt-5">
-        <h3 class="text-center bg-dark text-light p-2 rounded">
+        <h3 class="text-center bg-danger text-light p-2 rounded">
             Digite a sua nova senha
         </h3>
         <h4 class="text-success text-center">
@@ -45,14 +70,13 @@ if(isset($_GET['token'])&& isset($_GET['email'])){
             required>
 
         </div>
-        <div class="form-group">
-        <label for="csenha">Confirmar a Nova senha
-        </label>
-            <input type="password" name="csenha" id="csenha"
-            class="form-control" placeholder="Confirmar nova Senha" required>
+            <div class="form-group">
+                <label for="csenha">Confirmar a Nova senha</label>
+                    <input type="password" name="csenha" id="csenha"class="form-control" placeholder="Confirmar nova Senha" required>
+            </div>
             <div class="form-group">
             <input type="submit" value="Criar a nova senha"
-            name="gerar" class="btn btn-block btn-dark">        
+            name="gerar" class="btn btn-block btn-danger">        
             </div>
         </div>
         </form>
